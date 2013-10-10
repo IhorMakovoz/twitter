@@ -4,7 +4,9 @@
     <list default="true" id="453f130b-93b3-4861-a106-a870a069547a" name="Default" comment="" />
     <ignored path="Twitter.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/home-page.jsp" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381386669823" ignored="false" />
+    <file path="/home-page.jsp" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381390445706" ignored="false" />
+    <file path="/registration.jsp" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381390576691" ignored="false" />
+    <file path="/login.jsp" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381390167114" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,10 +67,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home-page.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home-page.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/home-page.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="46" selection-start="606" selection-end="606" vertical-scroll-proportion="0.36925796">
+            <state line="24" column="50" selection-start="917" selection-end="917" vertical-scroll-proportion="-16.285715">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registration.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/registration.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="26" selection-start="788" selection-end="788" vertical-scroll-proportion="-10.178572">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="73" selection-start="1455" selection-end="1515" vertical-scroll-proportion="-11.392858">
               <folding />
             </state>
           </provider>
@@ -83,7 +103,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="web.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
             <state />
@@ -95,7 +115,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="50" selection-start="612" selection-end="612" vertical-scroll-proportion="-11.137931">
+            <state line="17" column="4" selection-start="602" selection-end="602" vertical-scroll-proportion="0.57168144">
               <folding />
             </state>
           </provider>
@@ -112,8 +132,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/home-page.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/registration.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -283,6 +306,11 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+    </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 7.0">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -585,6 +613,27 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="73" selection-start="1455" selection-end="1515" vertical-scroll-proportion="-11.392858">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/registration.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="26" selection-start="788" selection-end="788" vertical-scroll-proportion="-10.178572">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/home-page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="50" selection-start="917" selection-end="917" vertical-scroll-proportion="-16.285715">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="14" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
@@ -603,14 +652,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="50" selection-start="612" selection-end="612" vertical-scroll-proportion="-11.137931">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/home-page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="46" selection-start="606" selection-end="606" vertical-scroll-proportion="0.36925796">
+        <state line="17" column="4" selection-start="602" selection-end="602" vertical-scroll-proportion="0.57168144">
           <folding />
         </state>
       </provider>
