@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="Twitter:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Twitter.war">
+      <element id="artifact" artifact-name="Twitter:war exploded" />
+    </root>
+  </artifact>
+</component>
