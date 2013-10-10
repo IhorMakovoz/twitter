@@ -5,6 +5,16 @@
 
 	<display-name>Spring MVC Application</display-name>
 
+
+    <servlet>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>com.in6k.twitter.RegistrationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/RegistrationServlet</url-pattern>
+    </servlet-mapping>
    <!-- <servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

@@ -5,8 +5,13 @@
     <ignored path="Twitter.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/home-page.jsp" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381390445706" ignored="false" />
-    <file path="/registration.jsp" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381390576691" ignored="false" />
+    <file path="/registration.jsp" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381395974146" ignored="false" />
     <file path="/login.jsp" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381390167114" ignored="false" />
+    <file path="/RegistrationServlet.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381396235909" ignored="false" />
+    <file path="/Registration.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381395686739" ignored="false" />
+    <file path="/RegistrationTransaction.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381395687661" ignored="false" />
+    <file path="/web.xml" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381395954489" ignored="false" />
+    <file path="/registration-form-success.jsp" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381396917683" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,16 +75,77 @@
       <file leaf-file-name="home-page.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/home-page.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="50" selection-start="917" selection-end="917" vertical-scroll-proportion="-16.285715">
+            <state line="30" column="6" selection-start="1057" selection-end="1057" vertical-scroll-proportion="-18.321428">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registration.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DataBaseConnectionHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/DataBaseConnectionHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="12" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegistrationServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/RegistrationServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="117" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="21" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registration-form-success.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration-form-success.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="93" selection-start="1231" selection-end="1231" vertical-scroll-proportion="-11.857142">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegistrationTransaction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/RegistrationTransaction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="53" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#453#467#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Registration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/Registration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="14" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registration.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/registration.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="26" selection-start="788" selection-end="788" vertical-scroll-proportion="-10.178572">
+            <state line="41" column="29" selection-start="1492" selection-end="1492" vertical-scroll-proportion="0.70240295">
               <folding />
             </state>
           </provider>
@@ -88,22 +154,13 @@
       <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="73" selection-start="1455" selection-end="1515" vertical-scroll-proportion="-11.392858">
+            <state line="9" column="76" selection-start="410" selection-end="410" vertical-scroll-proportion="-6.107143">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="14" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
             <state />
@@ -115,7 +172,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="4" selection-start="602" selection-end="602" vertical-scroll-proportion="0.57168144">
+            <state line="15" column="41" selection-start="562" selection-end="562" vertical-scroll-proportion="-9.827586">
               <folding />
             </state>
           </provider>
@@ -135,8 +192,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/home-page.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/registration.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/DataBaseConnectionHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/Registration.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/registration.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/RegistrationServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/RegistrationTransaction.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration-form-success.jsp" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -159,6 +222,25 @@
     <option name="y" value="24" />
     <option name="width" value="1855" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Java EE issues</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Java EE issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -288,7 +370,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Twitter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Twitter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -298,6 +414,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.sorted" value="false" />
@@ -613,30 +730,23 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="73" selection-start="1455" selection-end="1515" vertical-scroll-proportion="-11.392858">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="26" selection-start="788" selection-end="788" vertical-scroll-proportion="-10.178572">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/home-page.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="50" selection-start="917" selection-end="917" vertical-scroll-proportion="-16.285715">
+        <state line="30" column="6" selection-start="1057" selection-end="1057" vertical-scroll-proportion="-18.321428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/Registration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="14" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="14" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
+        <state line="14" column="8" selection-start="732" selection-end="732" vertical-scroll-proportion="0.46748683">
           <folding />
         </state>
       </provider>
@@ -652,7 +762,63 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="4" selection-start="602" selection-end="602" vertical-scroll-proportion="0.57168144">
+        <state line="15" column="41" selection-start="562" selection-end="562" vertical-scroll-proportion="-9.827586">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/RegistrationTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="53" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#453#467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="76" selection-start="410" selection-end="410" vertical-scroll-proportion="-6.107143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration-form-success.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="93" selection-start="1231" selection-end="1231" vertical-scroll-proportion="-11.857142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="21" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/DataBaseConnectionHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="12" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/RegistrationServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="117" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/registration.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="29" selection-start="1492" selection-end="1492" vertical-scroll-proportion="0.70240295">
           <folding />
         </state>
       </provider>
