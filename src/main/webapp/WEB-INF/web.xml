@@ -8,12 +8,12 @@
 
     <servlet>
         <servlet-name>RegistrationServlet</servlet-name>
-        <servlet-class>com.in6k.twitter.RegistrationServlet</servlet-class>
+        <servlet-class>garbage.RegistrationServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>RegistrationServlet</servlet-name>
-        <url-pattern>/RegistrationServlet</url-pattern>
+        <url-pattern>/Registration</url-pattern>
     </servlet-mapping>
    <!-- <servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>
