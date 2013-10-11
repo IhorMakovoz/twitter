@@ -22,7 +22,7 @@
     </div>
     <div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="registration.jsp">Registration</a></li>
+            <li><a href="signup.jsp">Registration</a></li>
             <li><a href="login.jsp">Login</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
@@ -32,7 +32,7 @@
     <div class="col-md-4 col-md-offset-4">
         <h1 class = "text-primary text-center">Login form</h1>
 
-        <form role="form" action="" method="post">
+        <form role="form" action="/login" method="post">
 
             <div class="form-group">
                 <label class="control-label">Login</label>

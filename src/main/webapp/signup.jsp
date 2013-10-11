@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Twitter Clone</title>
+    <title>Twitter Clone: registration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -13,7 +13,6 @@
 
 </head>
 <body>
-
 <nav class="navbar navbar-default col-md-6 col-md-offset-3" role="navigation" >
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -28,24 +27,30 @@
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>
-<%--------------------------%>
 
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
-        <% if (request.getSession().getAttribute("login") != null){  %>
-        <h1 class = "text-primary text-center"><%=request.getSession().getAttribute("login") %> Home page</h1>
-        <% }
-        else { %>
-        <h1 class = "text-primary text-center">Home page</h1>
-        <% } %>
+        <h1 class = "text-primary text-center">Registration form</h1>
+
+        <form role="form" action="/signup" method="post">
+
+            <div class="form-group">
+                <label class="control-label">Login</label>
+                <input type="text" name="login" value="login" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Password</label>
+                <input type="text" name="password" value="password" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-default">Sign up</button>
+            <button type="button" class="btn btn-link">Cancel</button>
+
+        </form>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4 col-md-offset-4">
-
-    </div>
-</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="//code.jquery.com/jquery.js"></script>
@@ -53,20 +58,3 @@
 
 </body>
 </html>
-
-<%--<div class="row">
-    <div class="col-md-6 col-md-offset-3">
-        <h1 class = "text-primary text-left">Twitter Clone</h1>
-        <a href="home-page.jsp">
-            <img src="images/logo.jpeg" width="100" height="100" alt="logo"/>
-        </a>
-        <a href="signup.jsp" class="btn btn-default btn-lg">Registration</a>
-        <a href="login.jsp" class="btn btn-primary btn-lg">Login</a>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-6 col-md-offset-3">
-        <h1 class = "text-primary text-left">Some text</h1>
-    </div>
-</div>--%>

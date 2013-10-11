@@ -11,7 +11,7 @@ public class DataBaseConnectionHelper {
 
     private static Connection connection = null;
 
-    public static Connection getConnection() throws SQLException, ClassNotFoundException {
+    public static Connection getLink() throws SQLException, ClassNotFoundException {
         if (connection == null) {
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(MYSQL_CONNECTION_STRING, USER, PASSWORD);

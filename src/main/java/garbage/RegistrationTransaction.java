@@ -13,7 +13,7 @@ public class RegistrationTransaction {
 
     public void addRegistration(Registration registration) throws SQLException, ClassNotFoundException {
        // List<Registration> registrations = new ArrayList<Registration>();
-        Connection connection = DataBaseConnectionHelper.getConnection();
+        Connection connection = DataBaseConnectionHelper.getLink();
 
         String insertTableSQL = "INSERT INTO users"
                               + "(login, password) VALUES"
@@ -57,7 +57,7 @@ public class RegistrationTransaction {
     public static boolean getRegistrationLogin(Registration registration) throws SQLException, ClassNotFoundException {
         List<Registration> result = new ArrayList<Registration>();
 
-        Connection connection = DataBaseConnectionHelper.getConnection();
+        Connection connection = DataBaseConnectionHelper.getLink();
         Statement statement = connection.createStatement();
 
         ResultSet rs = statement.executeQuery("SELECT login, password FROM users");
