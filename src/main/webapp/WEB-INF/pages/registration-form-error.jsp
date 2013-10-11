@@ -32,10 +32,31 @@
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
         <div class="container">
-            <h3 class="text-center" style="color: green;">Registration was successful</h3>
-            <div class="alert alert-success text-center">Thank you! Your registration was successful, pls log in</div>
-            <p class="text-center"><a href="/login.jsp" class="btn btn-primary btn-sm ">Login</a></p>
+            <div class="alert alert-danger text-center">Registration was failed. This account has already taken</div>
         </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h1 class = "text-primary text-center">Registration form</h1>
+
+        <form role="form" action="/signup" method="post">
+
+            <div class="form-group">
+                <label class="control-label">Login</label>
+                <input type="text" name="login" value="login" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Password</label>
+                <input type="text" name="password" value="password" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-default">Sign up</button>
+            <button type="button" class="btn btn-link">Cancel</button>
+
+        </form>
     </div>
 </div>
 

@@ -27,8 +27,6 @@ public class AccountManager {
                 result.add(name);
             }
 
-
-
             for(String name : result) {
                 if (name.equals(login)) {
                     return false;

@@ -21,6 +21,6 @@ public class SignUpPageServlet extends HttpServlet {
         }
         /*request.setAttribute("error", true);
         request.setAttribute("login", login);*/
-        request.getRequestDispatcher("/signup.jsp").include(request, response);
+        request.getRequestDispatcher("//WEB-INF/pages/registration-form-error.jsp").include(request, response);
     }
 }

@@ -1,7 +1,9 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Twitter Clone: login</title>
+    <title>Twitter Clone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -28,17 +30,24 @@
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>
+<%--------------------------%>
 
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
-        <div class="container">
-            <h3 class="text-center" style="color: green;">Registration was successful</h3>
-            <div class="alert alert-success text-center">Thank you! Your registration was successful, pls log in</div>
-            <p class="text-center"><a href="/login.jsp" class="btn btn-primary btn-sm ">Login</a></p>
-        </div>
+        <% if (request.getSession().getAttribute("login") != null){  %>
+        <h1 class = "text-primary text-center"><%=request.getSession().getAttribute("login") %> Home page</h1>
+        <% }
+        else { %>
+        <h1 class = "text-primary text-center">Home page</h1>
+        <% } %>
     </div>
 </div>
 
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+
+    </div>
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="//code.jquery.com/jquery.js"></script>

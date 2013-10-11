@@ -17,16 +17,14 @@ public class LoginPageServlet extends HttpServlet {
         if (AccountManager.isValid(login, password)) {
             request.getSession().setAttribute("authorized", true);
             request.getSession().setAttribute("login", login);
-            request.getRequestDispatcher("/home-page.jsp").include(request, response);
+            request.getRequestDispatcher("WEB-INF/pages/login-form-success.jsp").include(request, response);
             return;
         }
 
         try {
             ConsoleMessagePrinter.print(MessageManager.getMessage());
-        } catch (SQLException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         request.getRequestDispatcher("/login.jsp").include(request, response);
     }
