@@ -33,6 +33,15 @@
         <servlet-name>logoutservlet</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>messageservlet</servlet-name>
+        <servlet-class>com.in6k.twitter.MessageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>messageservlet</servlet-name>
+        <url-pattern>/message</url-pattern>
+    </servlet-mapping>
    <!-- <servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

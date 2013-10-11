@@ -1,8 +1,7 @@
 package com.in6k.twitter;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class MessageManager {
     public static List<String> getMessage() throws SQLException, ClassNotFoundException {
@@ -24,17 +23,20 @@ public class MessageManager {
         //c.close();
         return message;
     }
-    /*public static void addMessage(String message) {
+
+    public static void addMessage(String message) {
         try {
 
             Class.forName("com.mysql.jdbc.Driver");
 
             Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
 
-            PreparedStatement ps = c.prepareStatement("INSERT INTO users " + "(login, password) VALUES" + "(?, ?)");
+            PreparedStatement ps = c.prepareStatement("INSERT INTO twits " + "(user_id, date_at, message) VALUES" + "(?, ?, ?)");
 
-            ps.setString(1, login);
-            ps.setString(2, password);
+            ps.setInt(1, 11 );
+            ps.setTimestamp(2, new Timestamp(new java.util.Date().getTime()));
+            ps.setString(3, message);
+
             ps.executeUpdate();
 
             ps.close();
@@ -48,5 +50,5 @@ public class MessageManager {
         catch (SQLException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 }
