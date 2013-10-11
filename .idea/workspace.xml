@@ -30,12 +30,13 @@
     <file path="/ConsoleMessagePrinter.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381489913417" ignored="false" />
     <file path="$PROJECT_DIR$/../mypal/src/main/java/com/in6k/TransactionConsoleWriter.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381489822531" ignored="false" />
     <file path="/TransactionConsoleWriter.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381489811222" ignored="false" />
-    <file path="$PROJECT_DIR$/../mypal/src/main/java/com/in6k/TransactionFormPostServlet.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381490169241" ignored="false" />
+    <file path="$PROJECT_DIR$/../mypal/src/main/java/com/in6k/TransactionFormPostServlet.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381502405637" ignored="false" />
     <file path="/TransactionFormPostServlet.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381490167593" ignored="false" />
     <file path="/registration-form-error.jsp" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381492289330" ignored="false" />
     <file path="/user-page.jsp" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381493642146" ignored="false" />
     <file path="/LogoutServlet.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381498940147" ignored="false" />
     <file path="/MessageServlet.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381501253276" ignored="false" />
+    <file path="/login-form-error.jsp" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381502384764" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,40 +97,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="home-page.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/home-page.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="0" selection-start="813" selection-end="813" vertical-scroll-proportion="0.6785714">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="20" selection-start="505" selection-end="505" vertical-scroll-proportion="8.821428">
+            <state line="34" column="40" selection-start="1206" selection-end="1212" vertical-scroll-proportion="-10.857142">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="29" selection-start="1349" selection-end="1357" vertical-scroll-proportion="-16.37931">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginPageServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/LoginPageServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="85" selection-start="759" selection-end="832" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -137,74 +118,36 @@
       <file leaf-file-name="signup.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/signup.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="61" selection-start="1389" selection-end="1402" vertical-scroll-proportion="-11.857142">
+            <state line="40" column="53" selection-start="1444" selection-end="1444" vertical-scroll-proportion="-13.785714">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home-page.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/home-page.jsp">
+      <file leaf-file-name="registration-form-error.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration-form-error.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="42" selection-start="1910" selection-end="1910" vertical-scroll-proportion="-11.25">
+            <state line="27" column="12" selection-start="0" selection-end="2292" vertical-scroll-proportion="10.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/MessageServlet.java">
+      <file leaf-file-name="login-form-error.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login-form-error.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="81" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="55" column="63" selection-start="1943" selection-end="1943" vertical-scroll-proportion="-37.32143">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignUpPageServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/SignUpPageServlet.java">
+      <file leaf-file-name="LoginPageServlet.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/LoginPageServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="15" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
+            <state line="28" column="38" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.7302839">
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogoutServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/LogoutServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="64" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageManager.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/MessageManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="72" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.41442952">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#231#239#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/AccountManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="42" selection-start="2845" selection-end="2845" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#332#340#0" expanded="true" />
-                <element signature="e#1231#1247#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -220,22 +163,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/MessagePrinter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/ConsoleMessagePrinter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/SignUpPageServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login-form-error.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login-form-success.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration-form-success.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration-form-error.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/AccountManager.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/User-page.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-page.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/LoginPageServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/LogoutServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/MessageServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/home-page.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/MessageManager.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/home-page.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login-form-error.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/LoginPageServlet.java" />
       </list>
     </option>
   </component>
@@ -746,7 +689,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2498615" sideWeight="0.7132116" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2867884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2867884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -818,21 +761,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/garbage/RegistrationTransaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="54" selection-start="2461" selection-end="2461" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login-form-success.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login-form-error.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
@@ -842,13 +771,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user-page.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="80" selection-start="1534" selection-end="1534" vertical-scroll-proportion="0.36783734">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration-form-error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="20" selection-start="1433" selection-end="2055" vertical-scroll-proportion="-14.928572">
           <folding />
         </state>
       </provider>
@@ -871,40 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/LogoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="64" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/SignUpPageServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="15" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="20" selection-start="505" selection-end="505" vertical-scroll-proportion="8.821428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/LoginPageServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="85" selection-start="759" selection-end="832" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
@@ -921,35 +809,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/MessageServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/garbage/DataBaseConnectionHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="81" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0">
+        <state line="6" column="13" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/MessageServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="81" selection-start="597" selection-end="597" vertical-scroll-proportion="0.3895899">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/SignUpPageServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="15" selection-start="717" selection-end="717" vertical-scroll-proportion="0.53943217">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/LogoutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="64" selection-start="476" selection-end="476" vertical-scroll-proportion="0.329653">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/MessageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="72" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.39774558">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#231#239#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/home-page.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="42" selection-start="1910" selection-end="1910" vertical-scroll-proportion="-11.25">
+        <state line="23" column="0" selection-start="813" selection-end="813" vertical-scroll-proportion="0.6785714">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/signup.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="61" selection-start="1389" selection-end="1402" vertical-scroll-proportion="-11.857142">
+        <state line="40" column="53" selection-start="1444" selection-end="1444" vertical-scroll-proportion="-13.785714">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/MessageManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration-form-error.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="72" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.41442952">
+        <state line="27" column="12" selection-start="0" selection-end="2292" vertical-scroll-proportion="10.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="40" selection-start="1206" selection-end="1212" vertical-scroll-proportion="-10.857142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login-form-error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="63" selection-start="1943" selection-end="1943" vertical-scroll-proportion="-37.32143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/LoginPageServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="38" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.7302839">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#231#239#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -26,6 +26,6 @@ public class LoginPageServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("/login.jsp").include(request, response);
+        request.getRequestDispatcher("WEB-INF/pages/login-form-error.jsp").include(request, response);
     }
 }

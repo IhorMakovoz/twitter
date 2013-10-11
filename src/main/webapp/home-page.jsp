@@ -23,12 +23,11 @@
     </div>
     <div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="signup.jsp">Registration</a></li>
-
             <% if ((Boolean)request.getSession().getAttribute("authorized") != null) {  %>
             <li><a href="#" style="color: blue"><%=request.getSession().getAttribute("login") %></a></li>
             <li><a href="/logout">Logout</a></li>
             <% } else { %>
+            <li><a href="signup.jsp">Registration</a></li>
             <li><a href="login.jsp">Login</a></li>
             <% } %>
         </ul>
