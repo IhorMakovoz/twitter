@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class LoginPageServlet extends HttpServlet {
 
@@ -20,6 +21,13 @@ public class LoginPageServlet extends HttpServlet {
             return;
         }
 
+        try {
+            ConsoleMessagePrinter.print(MessageManager.getMessage());
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
         request.getRequestDispatcher("/login.jsp").include(request, response);
     }
 }

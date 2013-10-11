@@ -5,24 +5,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MessageManager {
-    public List<String> getMessage(String message) throws SQLException, ClassNotFoundException {
-            List<String> result = new ArrayList<String>();
+    public static List<String> getMessage() throws SQLException, ClassNotFoundException {
+        List<String> message = new ArrayList<String>();
 
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
 
-            Statement s = c.createStatement();
-            ResultSet rs = s.executeQuery("SELECT message FROM twits");
+        Statement s = c.createStatement();
+        ResultSet rs = s.executeQuery("SELECT message FROM twits");
 
-            while (rs.next()) {
-                String value = rs.getString("message");
-                result.add(value);
-            }
+        while (rs.next()) {
+            String value = rs.getString("message");
+            message.add(value);
+        }
 
-            rs.close();
-            s.close();
-            c.close();
-            return result;
-
+        rs.close();
+        s.close();
+        //c.close();
+        return message;
     }
 }
