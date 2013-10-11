@@ -25,7 +25,7 @@
         <ul class="nav navbar-nav navbar-right">
             <li><a href="signup.jsp">Registration</a></li>
 
-            <% if (request.getSession().getAttribute("authorized") != null) {  %>
+            <% if ((Boolean)request.getSession().getAttribute("authorized") != null) {  %>
             <li><a href="/logout">Logout</a></li>
             <% } else { %>
             <li><a href="login.jsp">Login</a></li>

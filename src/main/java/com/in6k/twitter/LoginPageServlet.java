@@ -17,7 +17,7 @@ public class LoginPageServlet extends HttpServlet {
         if (AccountManager.isValid(login, password)) {
             request.getSession().setAttribute("authorized", true);
             request.getSession().setAttribute("login", login);
-            request.getRequestDispatcher("WEB-INF/pages/user-page.jsp").include(request, response);
+            request.getRequestDispatcher("home-page.jsp").include(request, response);
             return;
         }
 

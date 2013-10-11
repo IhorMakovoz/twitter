@@ -8,10 +8,10 @@ import java.io.IOException;
 
 public class LogoutServlet extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            request.getSession().setAttribute("authorized", false);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            request.getSession().setAttribute("authorized", null);
             request.getSession().setAttribute("login", null);
-            request.getRequestDispatcher("WEB-INF/pages/home-page.jsp").include(request, response);
+            request.getRequestDispatcher("home-page.jsp").include(request, response);
 
     }
 }
