@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>signupservlet</servlet-name>
-        <servlet-class>com.in6k.twitter.SignUpPageServlet</servlet-class>
+        <servlet-class>com.in6k.twitter.servlets.SignUpPageServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -16,7 +16,7 @@
 
     <servlet>
         <servlet-name>loginservlet</servlet-name>
-        <servlet-class>com.in6k.twitter.LoginPageServlet</servlet-class>
+        <servlet-class>com.in6k.twitter.servlets.LoginPageServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -26,31 +26,57 @@
 
     <servlet>
         <servlet-name>logoutservlet</servlet-name>
-        <servlet-class>com.in6k.twitter.LogoutServlet</servlet-class>
+        <servlet-class>com.in6k.twitter.servlets.LogoutServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>logoutservlet</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>messageservlet</servlet-name>
-        <servlet-class>com.in6k.twitter.MessageServlet</servlet-class>
+        <servlet-class>com.in6k.twitter.servlets.MessageServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>messageservlet</servlet-name>
         <url-pattern>/message</url-pattern>
     </servlet-mapping>
-   <!-- <servlet>
-		<servlet-name>mvc-dispatcher</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-	</servlet>
 
-	<servlet-mapping>
-		<servlet-name>mvc-dispatcher</servlet-name>
+    <servlet>
+        <servlet-name>homeservlet</servlet-name>
+        <servlet-class>com.in6k.twitter.servlets.HomePageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>homeservlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>followservlet</servlet-name>
+        <servlet-class>com.in6k.twitter.servlets.FollowServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>followservlet</servlet-name>
+        <url-pattern>/follow</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+   <!-- <servlets>
+		<servlets-name>mvc-dispatcher</servlets-name>
+		<servlets-class>org.springframework.web.servlets.DispatcherServlet</servlets-class>
+        <load-on-startup>1</load-on-startup>
+	</servlets>
+
+	<servlets-mapping>
+		<servlets-name>mvc-dispatcher</servlets-name>
 		<url-pattern>/</url-pattern>
-	</servlet-mapping>-->
+	</servlets-mapping>-->
 
 </web-app>

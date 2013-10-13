@@ -1,4 +1,12 @@
+<%@ page import="java.util.List" %>
+<%@ page import="com.in6k.twitter.primaryClasses.User" %>
+<%@ page import="com.in6k.twitter.primaryClasses.Tweet" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%User user = (User)request.getAttribute("currentuser");%>
 <!DOCTYPE html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <html>
 <head>
     <title>Twitter Clone</title>
@@ -17,13 +25,13 @@
 <nav class="navbar navbar-default col-md-6 col-md-offset-3" role="navigation" >
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-        <a href="home-page.jsp">
+        <a href="home">
             <img src="images/logo.jpeg" width="50" height="50" alt="logo"/>
         </a>
     </div>
     <div>
         <ul class="nav navbar-nav navbar-right">
-            <% if ((Boolean)request.getSession().getAttribute("authorized") != null) {  %>
+            <% if (request.getSession().getAttribute("authorized") != null) {  %>
             <li><a href="#" style="color: blue"><%=request.getSession().getAttribute("login") %></a></li>
             <li><a href="/logout">Logout</a></li>
             <% } else { %>
@@ -37,24 +45,54 @@
 
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
-        <% if (request.getSession().getAttribute("login") != null) {  %>
-        <h1 class = "text-primary text-center"><%=request.getSession().getAttribute("login") %> Home page</h1>
+
+        <%if (request.getSession().getAttribute("authorized") != null && (Boolean)request.getAttribute("ishomepage")) { %>
+            <h1 class = "text-primary text-center">Home page</h1>
+        <% }
+        else if (request.getSession().getAttribute("authorized") != null) { %>
+
+            <div><a href="/follow?user=<%=user.getLogin()%>"><button type="button" class="btn btn-info">Follow</button></a></div>
+            <h1 class = "text-primary text-center"><%=user.getLogin()%> page</h1>
+
         <% }
         else { %>
-        <h1 class = "text-primary text-center">Home page</h1>
+
         <% } %>
     </div>
 </div>
-<%if (request.getSession().getAttribute("authorized") != null) { %>
+<%if (request.getSession().getAttribute("authorized") != null && (Boolean)request.getAttribute("ishomepage")) { %>
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
         <form role="form" action="/message" method="post">
             <textarea name="message" value="message" class="form-control" rows="3"></textarea>
-            <button type="submit" class="btn btn-default">Post</button>
+            <button type="submit" class="btn btn-default" style="margin-top: 10px">Post</button>
         </form>
     </div>
 </div>
 <% } %>
+
+<% if(request.getAttribute("tweets") != null) {
+List<Tweet> tweets = (List<Tweet>) request.getAttribute("tweets");
+for(Tweet tweet : tweets) {%>
+<div class="row" style="margin-top: 15px">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <%=user.getLogin()%>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <%= tweet.getMessage() %>
+            </div>
+            <div class="panel-footer">
+                Posted at: <%= tweet.getDateAt() %>
+            </div>
+        </div>
+    </div>
+</div>
+<%}
+}%>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="//code.jquery.com/jquery.js"></script>

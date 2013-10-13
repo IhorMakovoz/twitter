@@ -1,5 +1,7 @@
 package garbage;
 
+import com.in6k.twitter.dataBaseConnector.DataBaseConnectionHelper;
+
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,7 +15,7 @@ public class RegistrationTransaction {
 
     public void addRegistration(Registration registration) throws SQLException, ClassNotFoundException {
        // List<Registration> registrations = new ArrayList<Registration>();
-        Connection connection = DataBaseConnectionHelper.getLink();
+        Connection connection = DataBaseConnectionHelper.getConnection();
 
         String insertTableSQL = "INSERT INTO users"
                               + "(login, password) VALUES"
@@ -57,7 +59,7 @@ public class RegistrationTransaction {
     public static boolean getRegistrationLogin(Registration registration) throws SQLException, ClassNotFoundException {
         List<Registration> result = new ArrayList<Registration>();
 
-        Connection connection = DataBaseConnectionHelper.getLink();
+        Connection connection = DataBaseConnectionHelper.getConnection();
         Statement statement = connection.createStatement();
 
         ResultSet rs = statement.executeQuery("SELECT login, password FROM users");
