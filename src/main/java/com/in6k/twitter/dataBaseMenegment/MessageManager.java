@@ -1,6 +1,7 @@
 package com.in6k.twitter.dataBaseMenegment;
 
 import com.in6k.twitter.primaryClasses.Tweet;
+import com.in6k.twitter.primaryClasses.User;
 
 import java.sql.*;
 import java.util.*;
@@ -62,15 +63,21 @@ public class MessageManager {
         Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
 
         Statement s = c.createStatement();
-        ResultSet rs = s.executeQuery("SELECT * " +
-                "FROM twits where user_id=" + userId +
-                "  ORDER BY date_at DESC LIMIT 20;");
+        ResultSet rs = s.executeQuery("SELECT * FROM twits " +
+                "where user_id " +
+                "in(" + userId + ", (SELECT FRIEND_ID FROM friends WHERE USER_ID=" + userId + ")) " +
+                "ORDER BY date_at " +
+                "DESC " +
+                "LIMIT 20");
 
 
         while (rs.next()) {
             Tweet tweet = new Tweet();
+            User user = AccountManager.getUserById(Integer.parseInt(rs.getString("user_id")));
+
             tweet.setMessage(rs.getString("message"));
             tweet.setDateAt(Timestamp.valueOf(rs.getString("date_at")));
+            tweet.setAuthor(user);
             messages.add(tweet);
         }
 

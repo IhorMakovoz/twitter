@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class FollowServlet extends HttpServlet {
+public class UnFollowServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -29,7 +29,7 @@ public class FollowServlet extends HttpServlet {
         }
 
         try {
-            AccountManager.follow(follower.getId(), followed.getId());
+            AccountManager.unfollow(follower.getId(), followed.getId());
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

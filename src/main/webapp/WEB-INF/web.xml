@@ -64,6 +64,16 @@
         <url-pattern>/follow</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>unfollowservlet</servlet-name>
+        <servlet-class>com.in6k.twitter.servlets.UnFollowServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>unfollowservlet</servlet-name>
+        <url-pattern>/unfollow</url-pattern>
+    </servlet-mapping>
+
 
 
 

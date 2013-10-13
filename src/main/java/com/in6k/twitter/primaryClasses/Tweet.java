@@ -10,6 +10,8 @@ public class Tweet {
 
     private Timestamp dateAt;
 
+    private User author;
+
     public Integer getId() {
         return id;
     }
@@ -32,5 +34,13 @@ public class Tweet {
 
     public void setDateAt(Timestamp dateAt) {
         this.dateAt = dateAt;
+    }
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
     }
 }

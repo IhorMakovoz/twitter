@@ -22,6 +22,8 @@ public class HomePageServlet extends HttpServlet {
 
         String currentUser = (String)request.getSession().getAttribute("login");
 
+        Boolean isFollowedByUser = isFollowedByUser(currentUser, anotherUser);
+
         String login = (anotherUser == null) ? currentUser: anotherUser;
 
         User user = new User();
@@ -47,13 +49,26 @@ public class HomePageServlet extends HttpServlet {
         boolean isHomepage = (currentUser != null && currentUser.equals(anotherUser)) || (anotherUser == null);
 
         request.setAttribute("ishomepage", isHomepage);
+        request.setAttribute("isfollowedbyuser", isFollowedByUser);
         request.setAttribute("currentuser", user);
         request.setAttribute("tweets", tweets);
 
         request.getRequestDispatcher("/home-page.jsp").include(request, response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private boolean isFollowedByUser(String follower, String followed) {
+        Boolean isFollowedByUser = false;
+        try {
+            if (followed != null) {
+                isFollowedByUser = AccountManager.isFollowedByUser(follower, followed);
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        return isFollowedByUser;
     }
+
 }

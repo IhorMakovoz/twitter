@@ -131,11 +131,33 @@ public class AccountManager {
         return user;
     }
 
-    /*public static void follow(Integer follower, Integer followed) throws SQLException, ClassNotFoundException {
+    public static User getUserById(Integer id) throws ClassNotFoundException, SQLException {
+
+        User user = new User();
+
         Class.forName("com.mysql.jdbc.Driver");
         Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
 
-        PreparedStatement ps = c.prepareStatement("INSERT INTO friends " + "(user_id, friend_id) VALUES" + "(?, ?)");
+        Statement s = c.createStatement();
+        ResultSet rs = s.executeQuery("SELECT * FROM users where id='" + id + "'");
+
+        while (rs.next()) {
+            user.setId(id);
+            user.setLogin(rs.getString("login"));
+        }
+
+        rs.close();
+        s.close();
+        c.close();
+
+        return user;
+    }
+
+    public static void follow(Integer follower, Integer followed) throws SQLException, ClassNotFoundException {
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
+
+        PreparedStatement ps = c.prepareStatement("INSERT INTO friends (user_id, friend_id) VALUES(?, ?)");
 
         ps.setInt(1, follower);
         ps.setInt(2, followed);
@@ -143,5 +165,40 @@ public class AccountManager {
 
         ps.close();
         c.close();
-    }*/
+    }
+
+    public static void unfollow(Integer follower, Integer followed) throws SQLException, ClassNotFoundException {
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
+
+        PreparedStatement ps = c.prepareStatement("delete from friends where user_id=? and friend_id=?");
+
+        ps.setInt(1, follower);
+        ps.setInt(2, followed);
+        ps.executeUpdate();
+
+        ps.close();
+        c.close();
+    }
+
+
+    public static Boolean isFollowedByUser(String follower, String followed) throws ClassNotFoundException, SQLException {
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
+
+        Statement s = c.createStatement();
+        ResultSet rs = s.executeQuery("SELECT COUNT(*) AS rowcount FROM friends where user_id=" + getUser(follower).getId() + " and friend_id=" + getUser(followed).getId());
+
+        Boolean isFollow = false;
+
+        while (rs.next()) {
+            isFollow = (rs.getInt("rowcount") > 0);
+        }
+
+        rs.close();
+        s.close();
+        c.close();
+
+        return isFollow;
+    }
 }

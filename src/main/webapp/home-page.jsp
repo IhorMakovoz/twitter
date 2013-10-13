@@ -50,12 +50,13 @@
             <h1 class = "text-primary text-center">Home page</h1>
         <% }
         else if (request.getSession().getAttribute("authorized") != null) { %>
-
-            <div><a href="/follow?user=<%=user.getLogin()%>"><button type="button" class="btn btn-info">Follow</button></a></div>
+            <% if ((Boolean)request.getAttribute("isfollowedbyuser")) { %>
+            <div><a href="/unfollow?user=<%=user.getLogin()%>"><button type="button" class="btn btn-info">Unfollow</button></a></div>
+            <% }
+            else { %>
+                <div><a href="/follow?user=<%=user.getLogin()%>"><button type="button" class="btn btn-info">Follow</button></a></div>
+            <% } %>
             <h1 class = "text-primary text-center"><%=user.getLogin()%> page</h1>
-
-        <% }
-        else { %>
 
         <% } %>
     </div>
@@ -79,7 +80,7 @@ for(Tweet tweet : tweets) {%>
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">
-                    <%=user.getLogin()%>
+                    <%= tweet.getAuthor().getLogin() %>
                 </h3>
             </div>
             <div class="panel-body">
