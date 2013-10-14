@@ -15,7 +15,7 @@ public class FollowServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String followerName = (String) request.getSession().getAttribute("login");
-        String followedName = (String) request.getParameter("user");
+        String followedName = (String) request.getQueryString();
 
         User follower = null;
         User followed = null;

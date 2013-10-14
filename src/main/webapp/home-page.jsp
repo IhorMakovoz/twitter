@@ -51,15 +51,16 @@
         <% }
         else if (request.getSession().getAttribute("authorized") != null) { %>
             <% if ((Boolean)request.getAttribute("isfollowedbyuser")) { %>
-            <div><a href="/unfollow?user=<%=user.getLogin()%>"><button type="button" class="btn btn-info">Unfollow</button></a></div>
-            <% }
+            <div><a href="/unfollow?<%=user.getLogin()%>"><button type="button" class="btn btn-info">Unfollow</button></a></div>
+            <% } // /unfollow?user=
             else { %>
-                <div><a href="/follow?user=<%=user.getLogin()%>"><button type="button" class="btn btn-info">Follow</button></a></div>
+                <div><a href="/follow?<%=user.getLogin()%>"><button type="button" class="btn btn-info">Follow</button></a></div>
             <% } %>
             <h1 class = "text-primary text-center"><%=user.getLogin()%> page</h1>
         <% } %>
     </div>
 </div>
+
 <%if (request.getSession().getAttribute("authorized") != null && (Boolean)request.getAttribute("ishomepage")) { %>
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
