@@ -65,8 +65,8 @@ public class MessageManager {
         Statement s = c.createStatement();
         ResultSet rs = s.executeQuery("SELECT * FROM twits " +
                 "where user_id " +
-                "in(SELECT friend_id FROM friends WHERE USER_ID=" + userId + ") " +
-                "ORDER BY date_at " +
+                "in(SELECT friend_id FROM friends WHERE USER_ID=" + userId + ") OR user_id=" + userId +
+                " ORDER BY date_at " +
                 "DESC " +
                 "LIMIT 20");
 
