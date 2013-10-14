@@ -63,9 +63,9 @@ public class HomePageServlet extends HttpServlet {
                 isFollowedByUser = AccountManager.isFollowedByUser(follower, followed);
             }
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         } catch (SQLException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
 
         return isFollowedByUser;

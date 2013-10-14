@@ -1,6 +1,6 @@
 package garbage;
 
-import com.in6k.twitter.dataBaseConnector.DataBaseConnectionHelper;
+import com.in6k.twitter.dataBaseMenegment.DataBaseConnectionHelper;
 
 import java.sql.*;
 import java.sql.Connection;

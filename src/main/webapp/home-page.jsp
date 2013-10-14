@@ -57,7 +57,6 @@
                 <div><a href="/follow?user=<%=user.getLogin()%>"><button type="button" class="btn btn-info">Follow</button></a></div>
             <% } %>
             <h1 class = "text-primary text-center"><%=user.getLogin()%> page</h1>
-
         <% } %>
     </div>
 </div>
