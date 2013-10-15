@@ -24,14 +24,8 @@ public class LoginServlet extends HttpServlet {
             return;
         }
 
-        try {
-            ConsoleMessagePrinter.print(MessageDAO.getMessage());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         request.getRequestDispatcher("WEB-INF/pages/login-form-error.jsp").include(request, response);
     }
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("login.jsp").include(request, response);

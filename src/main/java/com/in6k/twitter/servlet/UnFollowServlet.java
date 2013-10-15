@@ -25,9 +25,7 @@ public class UnFollowServlet extends HttpServlet {
 
         try {
             AccountDAO.unfollow(follower.getId(), followed.getId());
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

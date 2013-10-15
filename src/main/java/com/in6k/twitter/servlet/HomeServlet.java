@@ -27,19 +27,13 @@ public class HomeServlet extends HttpServlet {
 
         String login = (anotherUser == null) ? currentUser: anotherUser;
 
-        User user = new User();
+        /*User user = new User();*/
 
-        user = AccountDAO.getUser(login);
+        User user = AccountDAO.getUser(login);
 
         List<Tweet> tweets = null;
 
-        try {
-            tweets = MessageDAO.getLastMessages(user.getId());
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        tweets = MessageDAO.getLastMessages(user.getId());
 
         boolean isHomepage = (currentUser != null && currentUser.equals(anotherUser)) || (anotherUser == null);
 
@@ -53,17 +47,11 @@ public class HomeServlet extends HttpServlet {
 
     private boolean isFollowedByUser(String follower, String followed) {
         Boolean isFollowedByUser = false;
-        try {
+
             if (followed != null) {
                 isFollowedByUser = AccountDAO.isFollowedByUser(follower, followed);
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
 
         return isFollowedByUser;
     }
-
 }

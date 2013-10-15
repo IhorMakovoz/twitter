@@ -48,8 +48,9 @@ public class AccountDAO {
         try {
             Map<String, String> result = new HashMap<String, String>();
 
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
+            /*Class.forName("com.mysql.jdbc.Driver");
+            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");*/
+            Connection c = DatabaseConnectionHelper.getConnection();
 
             Statement s = c.createStatement();
             ResultSet rs = s.executeQuery("SELECT login, password FROM users");
@@ -60,7 +61,7 @@ public class AccountDAO {
 
             rs.close();
             s.close();
-            c.close();
+           // c.close();
 
             for(Map.Entry<String, String> entry : result.entrySet()) {
                 if(login.equals(entry.getKey())) {
@@ -131,10 +132,10 @@ public class AccountDAO {
         return result;
     }
 
-    public static User getUserById(Integer id) throws ClassNotFoundException, SQLException {
+    public static User getUserById(Integer id) {
+        User result = new User();
 
-        User user = new User();
-
+        try {
         Class.forName("com.mysql.jdbc.Driver");
         Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
 
@@ -142,15 +143,19 @@ public class AccountDAO {
         ResultSet rs = s.executeQuery("SELECT * FROM users where id='" + id + "'");
 
         while (rs.next()) {
-            user.setId(id);
-            user.setLogin(rs.getString("login"));
+            result.setId(id);
+            result.setLogin(rs.getString("login"));
         }
 
         rs.close();
         s.close();
         c.close();
 
-        return user;
+        } catch (Exception e) {
+            return null;
+        }
+
+        return result;
     }
 
     public static void follow(Integer follower, Integer followed) throws SQLException, ClassNotFoundException {
@@ -159,12 +164,14 @@ public class AccountDAO {
 
         PreparedStatement ps = c.prepareStatement("INSERT INTO friends (user_id, friend_id) VALUES(?, ?)");
 
-        ps.setInt(1, follower);
-        ps.setInt(2, followed);
-        ps.executeUpdate();
-
-        ps.close();
-        c.close();
+        try {
+            ps.setInt(1, follower);
+            ps.setInt(2, followed);
+            ps.executeUpdate();
+        } finally {
+            ps.close();
+            c.close();
+        }
     }
 
     public static void unfollow(Integer follower, Integer followed) throws SQLException, ClassNotFoundException {
@@ -173,16 +180,20 @@ public class AccountDAO {
 
         PreparedStatement ps = c.prepareStatement("delete from friends where user_id=? and friend_id=?");
 
-        ps.setInt(1, follower);
-        ps.setInt(2, followed);
-        ps.executeUpdate();
-
-        ps.close();
-        c.close();
+        try {
+            ps.setInt(1, follower);
+            ps.setInt(2, followed);
+            ps.executeUpdate();
+        }
+        finally {
+            ps.close();
+            c.close();
+        }
     }
 
 
-    public static Boolean isFollowedByUser(String follower, String followed) throws ClassNotFoundException, SQLException {
+    public static Boolean isFollowedByUser(String follower, String followed) {
+        try {
         Class.forName("com.mysql.jdbc.Driver");
         Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
 
@@ -197,6 +208,10 @@ public class AccountDAO {
             rs.close();
             s.close();
             c.close();
+        }
+
+        } catch (Exception e) {
+            return null;
         }
 
         return false;

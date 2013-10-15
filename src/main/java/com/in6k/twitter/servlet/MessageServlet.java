@@ -17,11 +17,7 @@ public class MessageServlet extends HttpServlet {
         String message = request.getParameter("message");
         Integer userId = null;
 
-        try {
-            userId = AccountDAO.getUser(login).getId();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        userId = AccountDAO.getUser(login).getId();
 
         MessageDAO.addMessage(userId, message);
 

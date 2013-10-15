@@ -18,7 +18,7 @@
     <file path="/AccountValidation.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381480956070" ignored="false" />
     <file path="/signup.jsp" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381474804722" ignored="false" />
     <file path="$PROJECT_DIR$/../twitterProject1/src/main/java/com/in6k/twitter/servlets/Account.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381475096948" ignored="false" />
-    <file path="/AccountManager.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381826650479" ignored="false" />
+    <file path="/AccountManager.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381830104888" ignored="false" />
     <file path="$PROJECT_DIR$/../twitterProject1/src/main/java/com/in6k/twitter/servlets/SignupPageServlet.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381476611414" ignored="false" />
     <file path="/DataBaseConnectionHelper.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381478114055" ignored="false" />
     <file path="/fragment.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381669040628" ignored="false" />
@@ -49,6 +49,9 @@
     <file path="$PROJECT_DIR$/../twitterProject/src/main/webapp/WEB-INF/web.xml" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381760288636" ignored="false" />
     <file path="$PROJECT_DIR$/../twitterProject/src/main/java/com/in6k/twitter/servlets/UserPageServlet.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381760288636" ignored="false" />
     <file path="/DummyFile.xpath" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381825023319" ignored="false" />
+    <file path="/AccountDAO.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381830098643" ignored="false" />
+    <file path="/MessageDAO.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381828741362" ignored="false" />
+    <file path="/HomeServlet.java" changelist="453f130b-93b3-4861-a106-a870a069547a" time="1381829351199" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +112,100 @@
     <favorites_list name="Twitter" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="FollowServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/FollowServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="8" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/db/management/AccountDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="13" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#337#345#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnFollowServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/UnFollowServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/HomeServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="11" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home-page.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/home-page.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogoutServlet.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/LogoutServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="39" selection-start="601" selection-end="601" vertical-scroll-proportion="0.38632163">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/db/management/MessageDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="62" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/MessageServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignUpServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/SignUpServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="27" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/LoginServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="27" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -119,22 +215,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/dataBaseMenegment/AccountManager.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/home-page.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/HomePageServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/LoginPageServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/MessageServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/SignUpPageServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/SignUpServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/FollowServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/db/management/AccountManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/model/Tweet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/UnFollowServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/HomeServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/db/management/MessageManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/garbage/RegistrationTransaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/FollowServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/MessageServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/db/management/MessageDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/UnFollowServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/HomeServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/in6k/twitter/db/management/AccountDAO.java" />
       </list>
     </option>
   </component>
@@ -662,7 +758,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -684,7 +780,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24875346" sideWeight="0.6401719" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24875346" sideWeight="0.6401719" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3415682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -777,79 +873,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/home-page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="202" selection-end="202" vertical-scroll-proportion="0.10882016">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/SignUpServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="27" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/FollowServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="926" selection-end="926" vertical-scroll-proportion="0.36872146">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/db/management/AccountDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="26" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/db/management/DatabaseConnectionHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="5" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/UnFollowServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="66" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/HomeServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="2255" selection-end="2255" vertical-scroll-proportion="1.5489833">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/MessageServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="879" selection-end="879" vertical-scroll-proportion="0.5970425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/LogoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="42" selection-start="591" selection-end="591" vertical-scroll-proportion="0.30212015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/db/management/MessageDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="50" selection-start="2212" selection-end="2212" vertical-scroll-proportion="2.233273">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="41" selection-start="1407" selection-end="1407" vertical-scroll-proportion="0.9399293">
           <folding />
         </state>
       </provider>
@@ -871,6 +897,78 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/model/Tweet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/SignUpServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="27" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/FollowServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="8" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/home-page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/UnFollowServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/HomeServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="11" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/MessageServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/db/management/MessageDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="62" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="27" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/db/management/AccountDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="13" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#337#345#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/in6k/twitter/servlet/LogoutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="39" selection-start="601" selection-end="601" vertical-scroll-proportion="0.38632163">
           <folding />
         </state>
       </provider>
