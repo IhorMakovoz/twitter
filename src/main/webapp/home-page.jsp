@@ -1,6 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.in6k.twitter.primaryClasses.User" %>
-<%@ page import="com.in6k.twitter.primaryClasses.Tweet" %>
+<%@ page import="com.in6k.twitter.model.User" %>
+<%@ page import="com.in6k.twitter.model.Tweet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%User user = (User)request.getAttribute("currentuser");%>
@@ -25,13 +25,13 @@
 <nav class="navbar navbar-default col-md-6 col-md-offset-3" role="navigation" >
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-        <a href="home">
-            <img src="images/logo.jpeg" width="50" height="50" alt="logo"/>
+        <a href="/home-page.jsp">
+            <img src="/images/logo.jpeg" width="50" height="50" alt="logo"/>
         </a>
     </div>
     <div>
         <ul class="nav navbar-nav navbar-right">
-            <% if (request.getSession().getAttribute("authorized") != null) {  %>
+            <% if (request.getSession().getAttribute("authorized") != null) { %>
             <li><a href="#" style="color: blue"><%=request.getSession().getAttribute("login") %></a></li>
             <li><a href="/logout">Logout</a></li>
             <% } else { %>
@@ -51,10 +51,14 @@
         <% }
         else if (request.getSession().getAttribute("authorized") != null) { %>
             <% if ((Boolean)request.getAttribute("isfollowedbyuser")) { %>
-            <div><a href="/unfollow?<%=user.getLogin()%>"><button type="button" class="btn btn-info">Unfollow</button></a></div>
+                <form role="form" action="/unfollow/<%=user.getLogin()%>" method="get">
+                    <div><button type="submit" class="btn btn-info">Unfollow</button></div>
+                </form>
             <% } // /unfollow?user=
             else { %>
-                <div><a href="/follow?<%=user.getLogin()%>"><button type="button" class="btn btn-info">Follow</button></a></div>
+                <form role="form" action="/follow/<%=user.getLogin()%>" method="get">
+                    <div><button type="submit" class="btn btn-info">Follow</button></div>
+                </form>
             <% } %>
             <h1 class = "text-primary text-center"><%=user.getLogin()%> page</h1>
         <% } %>

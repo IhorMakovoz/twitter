@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>signupservlet</servlet-name>
-        <servlet-class>com.in6k.twitter.servlets.SignUpPageServlet</servlet-class>
+        <servlet-class>com.in6k.twitter.servlet.SignUpServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -16,7 +16,7 @@
 
     <servlet>
         <servlet-name>loginservlet</servlet-name>
-        <servlet-class>com.in6k.twitter.servlets.LoginPageServlet</servlet-class>
+        <servlet-class>com.in6k.twitter.servlet.LoginServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -26,7 +26,7 @@
 
     <servlet>
         <servlet-name>logoutservlet</servlet-name>
-        <servlet-class>com.in6k.twitter.servlets.LogoutServlet</servlet-class>
+        <servlet-class>com.in6k.twitter.servlet.LogoutServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -36,7 +36,7 @@
 
     <servlet>
         <servlet-name>messageservlet</servlet-name>
-        <servlet-class>com.in6k.twitter.servlets.MessageServlet</servlet-class>
+        <servlet-class>com.in6k.twitter.servlet.MessageServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -46,47 +46,47 @@
 
     <servlet>
         <servlet-name>homeservlet</servlet-name>
-        <servlet-class>com.in6k.twitter.servlets.HomePageServlet</servlet-class>
+        <servlet-class>com.in6k.twitter.servlet.HomeServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>homeservlet</servlet-name>
-        <url-pattern>/home</url-pattern>
+        <url-pattern>/home/*</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>followservlet</servlet-name>
-        <servlet-class>com.in6k.twitter.servlets.FollowServlet</servlet-class>
+        <servlet-class>com.in6k.twitter.servlet.FollowServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>followservlet</servlet-name>
-        <url-pattern>/follow</url-pattern>
+        <url-pattern>/follow/*</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>unfollowservlet</servlet-name>
-        <servlet-class>com.in6k.twitter.servlets.UnFollowServlet</servlet-class>
+        <servlet-class>com.in6k.twitter.servlet.UnFollowServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>unfollowservlet</servlet-name>
-        <url-pattern>/unfollow</url-pattern>
+        <url-pattern>/unfollow/*</url-pattern>
     </servlet-mapping>
 
 
 
 
 
-   <!-- <servlets>
-		<servlets-name>mvc-dispatcher</servlets-name>
-		<servlets-class>org.springframework.web.servlets.DispatcherServlet</servlets-class>
+   <!-- <servlet>
+		<servlet-name>mvc-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
-	</servlets>
+	</servlet>
 
-	<servlets-mapping>
-		<servlets-name>mvc-dispatcher</servlets-name>
+	<servlet-mapping>
+		<servlet-name>mvc-dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
-	</servlets-mapping>-->
+	</servlet-mapping>-->
 
 </web-app>
