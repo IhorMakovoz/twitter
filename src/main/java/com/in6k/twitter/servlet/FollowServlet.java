@@ -23,14 +23,12 @@ public class FollowServlet extends HttpServlet {
         follower = AccountDAO.getUser(followerName);
         followed = AccountDAO.getUser(followedName);
 
-
-        try {
-            AccountDAO.follow(follower.getId(), followed.getId());
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (AccountDAO.isFollowedByUser(followerName, followedName)) {
+            AccountDAO.unfollow(follower.getId(), followed.getId());
         }
-
-
+        else {
+            AccountDAO.follow(follower.getId(), followed.getId());
+        }
         response.sendRedirect("/home/" + followedName);
     }
 }

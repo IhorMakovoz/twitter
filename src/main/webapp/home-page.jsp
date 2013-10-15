@@ -51,7 +51,7 @@
         <% }
         else if (request.getSession().getAttribute("authorized") != null) { %>
             <% if ((Boolean)request.getAttribute("isfollowedbyuser")) { %>
-                <form role="form" action="/unfollow/<%=user.getLogin()%>" method="get">
+                <form role="form" action="/follow/<%=user.getLogin()%>" method="get">
                     <div><button type="submit" class="btn btn-info">Unfollow</button></div>
                 </form>
             <% } // /unfollow?user=

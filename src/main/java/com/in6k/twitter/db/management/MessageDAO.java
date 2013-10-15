@@ -10,8 +10,7 @@ public class MessageDAO {
     public static List<String> getMessage() throws SQLException, ClassNotFoundException {
         List<String> message = new ArrayList<String>();
         try {
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
+        Connection c = DatabaseConnectionHelper.getConnection();
 
         Statement s = c.createStatement();
         ResultSet rs = s.executeQuery("SELECT message FROM twits");
@@ -23,6 +22,7 @@ public class MessageDAO {
 
         rs.close();
         s.close();
+
         }
         catch (Exception e) {
             return null;
@@ -33,10 +33,7 @@ public class MessageDAO {
 
     public static void addMessage(Integer userId, String message) {
         try {
-
-            Class.forName("com.mysql.jdbc.Driver");
-
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
+            Connection c = DatabaseConnectionHelper.getConnection();
 
             PreparedStatement ps = c.prepareStatement("INSERT INTO twits " + "(user_id, date_at, message) VALUES" + "(?, ?, ?)");
 
@@ -47,7 +44,7 @@ public class MessageDAO {
             ps.executeUpdate();
 
             ps.close();
-            c.close();
+
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -58,8 +55,7 @@ public class MessageDAO {
 
         List<Tweet> result = new ArrayList<Tweet>();
         try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
+            Connection c = DatabaseConnectionHelper.getConnection();
 
             Statement s = c.createStatement();
             ResultSet rs = s.executeQuery("SELECT * FROM twits " +

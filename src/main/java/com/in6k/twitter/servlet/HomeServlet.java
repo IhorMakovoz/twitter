@@ -19,15 +19,12 @@ public class HomeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String currentUser = (String)request.getSession().getAttribute("login");
-
         String url = request.getRequestURI();
         String anotherUser = url.substring(url.lastIndexOf("/") + 1);
 
         Boolean isFollowedByUser = isFollowedByUser(currentUser, anotherUser);
 
         String login = (anotherUser == null) ? currentUser: anotherUser;
-
-        /*User user = new User();*/
 
         User user = AccountDAO.getUser(login);
 
