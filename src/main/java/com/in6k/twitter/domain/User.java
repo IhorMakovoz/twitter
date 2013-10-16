@@ -6,6 +6,10 @@ public class User {
     private String login;
     private String password;
 
+    public User(Integer userId) {
+        this.id = userId;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -30,8 +34,11 @@ public class User {
         this.password = password;
     }
 
-   /* public User(String login, String password) {
+    public User(String login, String password) {
         this.login = login;
         this.password = password;
-    }*/
+    }
+
+    public User() {
+    }
 }

@@ -12,6 +12,5 @@
         <property column="login" name="login" type="java.lang.String"/>
         <property column="password" name="password" type="java.lang.String"/>
 
-   <!--<many-to-one name="department" column="department_id" class="com.in6k.hibernate.domain.Department"/>-->
     </class>
 </hibernate-mapping>

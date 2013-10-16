@@ -1,7 +1,10 @@
 package com.in6k.twitter.db.management;
 
 import com.in6k.twitter.domain.User;
+import com.in6k.twitter.hibernate.util.HibernateUtil;
+import org.hibernate.Session;
 
+import javax.management.Query;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,86 +13,66 @@ import java.util.Map;
 
 public class AccountDAO {
 
+    public static boolean isUnique (String  login) {
+        Session session = HibernateUtil.getSession();
 
-    public static boolean isUnique(String login) {
         try {
-            List<String> result = new ArrayList<String>();
+            session.beginTransaction();
 
-            Connection c = DatabaseConnectionHelper.getConnection();
+            List<User> result = session.createQuery("FROM User ").list();
 
-            Statement s = c.createStatement();
-            ResultSet rs = s.executeQuery("SELECT login FROM users");
+            session.getTransaction().commit();
 
-            while (rs.next()) {
-
-                String name = rs.getString("login");
-                result.add(name);
-            }
-
-            for(String name : result) {
-                if (name.equals(login)) {
+            for(User user : result) {
+                if (login.equals(user.getLogin())) {
                     return false;
                 }
             }
-            rs.close();
-
         }
-        catch (Exception e) {
-            e.printStackTrace();
+        finally {
+            session.close();
         }
-
         return true;
     }
 
     public static boolean isValid(String login, String password) {
+        Session session = HibernateUtil.getSession();
+
         try {
-            Map<String, String> result = new HashMap<String, String>();
+            session.beginTransaction();
 
-            Connection c = DatabaseConnectionHelper.getConnection();
+            List<User> result = session.createQuery("FROM User ").list();
 
-            Statement s = c.createStatement();
-            ResultSet rs = s.executeQuery("SELECT login, password FROM users");
+            session.getTransaction().commit();
 
-            while (rs.next()) {
-                result.put(rs.getString("login"), rs.getString("password"));
-            }
-
-            rs.close();
-            s.close();
-
-            for(Map.Entry<String, String> entry : result.entrySet()) {
-                if(login.equals(entry.getKey())) {
-                    if(password.equals(entry.getValue())) {
-                        return true;
-                    }
+            for(User user : result) {
+                if (login.equals(user.getLogin()) && (password.equals(user.getPassword()))) {
+                    return true;
                 }
             }
         }
-        catch (Exception e) {
-            e.printStackTrace();
+        finally {
+            session.close();
         }
-
         return false;
     }
 
     public static void addAccount(String login, String password) {
-        try {
+        Session session = HibernateUtil.getSession();
 
-            Connection c = DatabaseConnectionHelper.getConnection();
+        User user = new User();
 
-            PreparedStatement ps = c.prepareStatement("INSERT INTO users (login, password) VALUES (?, ?)");
+        user.setLogin(login);
+        user.setPassword(password);
 
-            ps.setString(1, login);
-            ps.setString(2, password);
-            ps.executeUpdate();
+        session.beginTransaction();
 
-            ps.close();
+        session.save(user);
 
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        session.getTransaction().commit();
     }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public static User getUser(String login) {
         User result = new User();

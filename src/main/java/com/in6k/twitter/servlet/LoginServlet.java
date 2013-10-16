@@ -17,6 +17,7 @@ public class LoginServlet extends HttpServlet {
         String login = request.getParameter("login");
         String password = request.getParameter("password");
 
+
         if (AccountDAO.isValid(login, password)) {
             request.getSession().setAttribute("authorized", true);
             request.getSession().setAttribute("login", login);

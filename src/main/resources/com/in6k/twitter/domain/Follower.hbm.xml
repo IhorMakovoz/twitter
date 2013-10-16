@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.in6k.twitter.domain.Friend" table="friends">
+        <id column="id" name="id" type="java.lang.Long">
+            <generator class="native"/>
+        </id>
+
+        <many-to-one column="friend_id" name="friend" class="com.in6k.twitter.domain.User"/>
+        <many-to-one column="user_id" name="user" class="com.in6k.twitter.domain.User"/>
+
+        <!--<set name="students">-->
+        <!--<key column="course_id"/>-->
+        <!--<one-to-many class="com.in6k.hibernate.domain.Student"/>-->
+        <!--</set>-->
+    </class>
+</hibernate-mapping>

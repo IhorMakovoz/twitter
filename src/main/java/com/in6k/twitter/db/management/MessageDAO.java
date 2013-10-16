@@ -2,84 +2,57 @@ package com.in6k.twitter.db.management;
 
 import com.in6k.twitter.domain.Tweet;
 import com.in6k.twitter.domain.User;
+import com.in6k.twitter.hibernate.util.HibernateUtil;
+import org.hibernate.Query;
+import org.hibernate.Session;
 
 import java.sql.*;
 import java.util.*;
 
 public class MessageDAO {
-    public static List<String> getMessage() throws SQLException, ClassNotFoundException {
-        List<String> message = new ArrayList<String>();
-        try {
-        Connection c = DatabaseConnectionHelper.getConnection();
-
-        Statement s = c.createStatement();
-        ResultSet rs = s.executeQuery("SELECT message FROM twits");
-
-        while (rs.next()) {
-            String value = rs.getString("message");
-            message.add(value);
-        }
-
-        rs.close();
-        s.close();
-
-        }
-        catch (Exception e) {
-            return null;
-        }
-
-        return message;
-    }
 
     public static void addMessage(Integer userId, String message) {
-        try {
-            Connection c = DatabaseConnectionHelper.getConnection();
+        Session session = HibernateUtil.getSession();
+        session.beginTransaction();
+        User user = (User) session.get(User.class , new Integer(userId));
 
-            PreparedStatement ps = c.prepareStatement("INSERT INTO twits " + "(user_id, date_at, message) VALUES" + "(?, ?, ?)");
+        Tweet tweet = new Tweet();
+        tweet.setUser(user);
+        tweet.setDateAt(new Timestamp(new java.util.Date().getTime()));
+        tweet.setMessage(message);
 
-            ps.setInt(1, userId);
-            ps.setTimestamp(2, new Timestamp(new java.util.Date().getTime()));
-            ps.setString(3, message);
+        session.save(tweet);
 
-            ps.executeUpdate();
-
-            ps.close();
-
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        session.getTransaction().commit();
     }
 
     public static List<Tweet> getLastMessages(Integer userId) {
-
         List<Tweet> result = new ArrayList<Tweet>();
+        Session session = HibernateUtil.getSession();
         try{
-            Connection c = DatabaseConnectionHelper.getConnection();
-
-            Statement s = c.createStatement();
-            ResultSet rs = s.executeQuery("SELECT * FROM twits " +
-                "WHERE user_id IN (SELECT friend_id FROM friends WHERE USER_ID=" + userId + ") OR user_id=" + userId +
-                " ORDER BY date_at DESC LIMIT 20");
+        User acc = new User(userId);
 
 
-            while (rs.next()) {
-                Tweet tweet = new Tweet();
-                User user = AccountDAO.getUserById(Integer.parseInt(rs.getString("user_id")));
+        session.beginTransaction();
 
-                tweet.setMessage(rs.getString("message"));
-                tweet.setDateAt(Timestamp.valueOf(rs.getString("date_at")));
-                tweet.setAuthor(user);
-                result.add(tweet);
-            }
+        Query query = session.createQuery("FROM Tweet t WHERE t.user IN(" +
+            "SELECT friend from Friend f WHERE f.user= :user) OR t.user= :user ORDER BY dateAt DESC");
 
-            rs.close();
-            s.close();
+        query.setParameter("user", acc);
+        List<Tweet> tweets = query.list();
 
+        session.getTransaction().commit();
+
+        for (Tweet tweet : tweets) {
+            Tweet msg = new Tweet(tweet.getUser().getLogin(), tweet.getDateAt(), tweet.getMessage());
+            result.add(msg);
         }
-        catch (Exception e) {
-            return null;
+        }finally {
+            session.close();
+            return result;
         }
-        return result;
+
+
+
     }
 }

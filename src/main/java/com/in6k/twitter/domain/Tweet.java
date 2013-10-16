@@ -1,13 +1,29 @@
 package com.in6k.twitter.domain;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 public class Tweet {
 
     private Integer id;
+    private User user;
+    private Integer user_id;
     private String message;
-    private Timestamp dateAt;
-    private User author;
+    private Date dateAt;
+    private String login;
+
+    public Tweet(String login, Date dateAt, String message) {
+        this.login = login;
+        this.dateAt = dateAt;
+        this.message = message;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
 
     public Integer getId() {
         return id;
@@ -15,6 +31,14 @@ public class Tweet {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 
     public String getMessage() {
@@ -25,23 +49,25 @@ public class Tweet {
         this.message = message;
     }
 
-    public Timestamp getDateAt() {
+    public Date getDateAt() {
         return dateAt;
     }
 
-    public void setDateAt(Timestamp dateAt) {
+    public void setDateAt(Date dateAt) {
         this.dateAt = dateAt;
     }
 
-    public User getAuthor() {
-        return author;
+    public User getUser() {
+        return user;
     }
 
-    public void setAuthor(User author) {
-        this.author = author;
+    public void setUser(User author) {
+        this.user = author;
     }
+    public Tweet(){
 
-   /* public Tweet(String message, Timestamp dateAt, User author) {
+    }
+    /*public Tweet(String message, Timestamp dateAt, User author) {
         this.message = message;
         this.dateAt = dateAt;
         this.author = author;

@@ -1,4 +1,3 @@
-<!--
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
@@ -10,9 +9,9 @@
             <generator class="native"/>
         </id>
 
-        <property column="user_id" name="user_id" type="java.lang.String"/>
-        <property column="password" name="password" type="java.lang.String"/>
+        <many-to-one column="user_id" name="user" class="com.in6k.twitter.domain.User"/>
+        <property column="date_at" name="dateAt" type="java.util.Date"/>
+        <property column="message" name="message" type="java.lang.String"/>
 
-        &lt;!&ndash;<many-to-one name="department" column="department_id" class="com.in6k.hibernate.domain.Department"/>&ndash;&gt;
     </class>
-</hibernate-mapping>-->
+</hibernate-mapping>
