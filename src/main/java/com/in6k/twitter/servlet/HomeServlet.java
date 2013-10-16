@@ -2,15 +2,14 @@ package com.in6k.twitter.servlet;
 
 import com.in6k.twitter.db.management.AccountDAO;
 import com.in6k.twitter.db.management.MessageDAO;
-import com.in6k.twitter.model.Tweet;
-import com.in6k.twitter.model.User;
+import com.in6k.twitter.domain.Tweet;
+import com.in6k.twitter.domain.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 public class HomeServlet extends HttpServlet {

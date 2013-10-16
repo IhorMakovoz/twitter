@@ -1,14 +1,13 @@
 package com.in6k.twitter.servlet;
 
 import com.in6k.twitter.db.management.AccountDAO;
-import com.in6k.twitter.model.User;
+import com.in6k.twitter.domain.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 
 public class FollowServlet extends HttpServlet {
 

@@ -1,6 +1,6 @@
 package com.in6k.twitter.db.management;
 
-import com.in6k.twitter.model.User;
+import com.in6k.twitter.domain.User;
 
 import java.sql.*;
 import java.util.ArrayList;

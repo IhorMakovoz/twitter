@@ -1,6 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.in6k.twitter.model.User" %>
-<%@ page import="com.in6k.twitter.model.Tweet" %>
+<%@ page import="com.in6k.twitter.domain.User" %>
+<%@ page import="com.in6k.twitter.domain.Tweet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%User user = (User)request.getAttribute("currentuser");%>
