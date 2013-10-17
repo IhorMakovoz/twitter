@@ -4,7 +4,7 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="com.in6k.twitter.domain.Friend" table="friends">
-        <id column="id" name="id" type="java.lang.Long">
+        <id column="id" name="id" type="java.lang.Integer">
             <generator class="native"/>
         </id>
 

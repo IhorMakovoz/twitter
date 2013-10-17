@@ -46,7 +46,7 @@
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
 
-        <%if (request.getSession().getAttribute("authorized") != null && (Boolean)request.getAttribute("ishomepage")) { %>
+        <%if (request.getSession().getAttribute("authorized") != null && (Boolean)(request.getAttribute("ishomepage"))) { %>
             <h1 class = "text-primary text-center">Home page</h1>
         <% }
         else if (request.getSession().getAttribute("authorized") != null) { %>

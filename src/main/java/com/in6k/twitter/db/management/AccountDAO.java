@@ -1,15 +1,13 @@
 package com.in6k.twitter.db.management;
 
+import com.in6k.twitter.domain.Friend;
 import com.in6k.twitter.domain.User;
 import com.in6k.twitter.hibernate.util.HibernateUtil;
 import org.hibernate.Session;
+import org.hibernate.Query;
 
-import javax.management.Query;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class AccountDAO {
 
@@ -76,30 +74,20 @@ public class AccountDAO {
 
     public static User getUser(String login) {
         User result = new User();
-
+        Session session = HibernateUtil.getSession();
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/twitter", "root", "masterkey");
+            Query query = session.createQuery("FROM User u WHERE u.login= :login");
 
-            Statement s = c.createStatement();
-            ResultSet rs = s.executeQuery("SELECT * FROM users WHERE login='" + login + "'");
+            query.setParameter("login", login);
+            List<User> users = query.list();
 
-            try {
-                while (rs.next()) {
-                    result.setId(Integer.parseInt(rs.getString("id")));
-                    result.setLogin(login);
-                }
-            }
-            finally {
-                rs.close();
-                s.close();
-            }
+            result = users.get(0);
 
-        } catch (Exception e) {
-            return null;
+
+        }finally {
+            session.close();
+            return result;
         }
-
-        return result;
     }
 
     public static User getUserById(Integer id) {
@@ -127,45 +115,64 @@ public class AccountDAO {
     }
 
     public static void follow(Integer follower, Integer followed) {
-        try {
-        Connection c = DatabaseConnectionHelper.getConnection();
+        Session session = HibernateUtil.getSession();
 
-        PreparedStatement ps = c.prepareStatement("INSERT INTO friends (user_id, friend_id) VALUES(?, ?)");
+        session.beginTransaction();
+        User user = (User) session.get(User.class, new Integer(follower) );
+        User userFriend = (User) session.get(User.class, new Integer(followed));
+        Friend friend = new Friend();
 
-        try {
-            ps.setInt(1, follower);
-            ps.setInt(2, followed);
-            ps.executeUpdate();
-        }
-        finally {
-            ps.close();
-        }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        friend.setUser(user);
+        friend.setFriend(userFriend);
+
+        session.save(friend);
+
+        session.getTransaction().commit();
+
+
     }
-
     public static void unfollow(Integer follower, Integer followed) {
-        try {
-        Connection c = DatabaseConnectionHelper.getConnection();
+        /*("DELETE FROM friends where user_id=? AND friend_id=?");*/
+        Session session = HibernateUtil.getSession();
 
-        PreparedStatement ps = c.prepareStatement("DELETE FROM friends where user_id=? AND friend_id=?");
+        session.beginTransaction();
+        User user = (User) session.get(User.class, new Integer(follower) );
+        User userFriend = (User) session.get(User.class, new Integer(followed));
 
+        Query query = session.createQuery("DELETE Friend f WHERE f.user= :user AND f.friend= :friend");
+
+        query.setParameter("user", user);
+        query.setParameter("friend", userFriend);
+        query.executeUpdate();
+
+        session.getTransaction().commit();
+    }
+
+    public static Boolean isFollowedByUser(Integer follower, Integer followed) {
+        Session session = HibernateUtil.getSession();
         try {
-            ps.setInt(1, follower);
-            ps.setInt(2, followed);
-            ps.executeUpdate();
+            session.beginTransaction();
+
+            User user = (User) session.get(User.class, new Integer(follower));
+            User userFriend = (User) session.get(User.class, new Integer(followed));
+
+            Query query = session.createQuery("FROM Friend f WHERE f.user= :user AND f.friend= :friend");
+            query.setParameter("user", user);
+            query.setParameter("friend", user);
+
+            if (query.list().size() > 0) {
+                return true;
+            }
         }
         finally {
-            ps.close();
+            session.close();
         }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        return false;
     }
 
 
-    public static Boolean isFollowedByUser(String follower, String followed) {
+
+    /*public static Boolean isFollowedByUser(String follower, String followed) {
         try {
         Connection c = DatabaseConnectionHelper.getConnection();
 
@@ -186,5 +193,5 @@ public class AccountDAO {
         }
 
         return false;
-    }
+    }*/
 }

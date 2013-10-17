@@ -10,6 +10,10 @@ public class User {
         this.id = userId;
     }
 
+    public User(String login) {
+        this.login = login;
+    }
+
     public Integer getId() {
         return id;
     }

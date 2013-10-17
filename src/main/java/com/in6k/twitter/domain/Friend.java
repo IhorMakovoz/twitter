@@ -29,6 +29,4 @@ public class Friend {
         this.friend = friend;
     }
 
-    public Friend() {
-    }
 }
