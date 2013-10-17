@@ -132,7 +132,6 @@ public class AccountDAO {
 
     }
     public static void unfollow(Integer follower, Integer followed) {
-        /*("DELETE FROM friends where user_id=? AND friend_id=?");*/
         Session session = HibernateUtil.getSession();
 
         session.beginTransaction();
@@ -158,7 +157,7 @@ public class AccountDAO {
 
             Query query = session.createQuery("FROM Friend f WHERE f.user= :user AND f.friend= :friend");
             query.setParameter("user", user);
-            query.setParameter("friend", user);
+            query.setParameter("friend", userFriend);
 
             if (query.list().size() > 0) {
                 return true;

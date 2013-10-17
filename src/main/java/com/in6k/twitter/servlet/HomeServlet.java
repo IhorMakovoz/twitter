@@ -41,11 +41,15 @@ public class HomeServlet extends HttpServlet {
         request.getRequestDispatcher("/home-page.jsp").include(request, response);
     }
 
-    private boolean isFollowedByUser(String follower, String followed) {
+    private boolean isFollowedByUser(String currentUser, String anotherUser) {
         Boolean isFollowedByUser = false;
+        User follower = null;
+        User followed = null;
+        follower = AccountDAO.getUser(currentUser);
+        followed = AccountDAO.getUser(anotherUser);
 
             if (followed != null) {
-                isFollowedByUser = AccountDAO.isFollowedByUser(follower, followed);
+                isFollowedByUser = AccountDAO.isFollowedByUser(follower.getId(), followed.getId());
             }
 
         return isFollowedByUser;

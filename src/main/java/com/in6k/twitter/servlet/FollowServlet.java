@@ -22,7 +22,7 @@ public class FollowServlet extends HttpServlet {
         follower = AccountDAO.getUser(followerName);
         followed = AccountDAO.getUser(followedName);
 
-        if (AccountDAO.isFollowedByUser(followerName, followedName)) {
+        if (AccountDAO.isFollowedByUser(follower.getId(), followed.getId())) {
             AccountDAO.unfollow(follower.getId(), followed.getId());
         }
         else {
